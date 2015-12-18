@@ -18,7 +18,7 @@ export class App extends Component {
     const VConstant = round( ( 8400*tConstant/(tConstant + 15) - 60*tConstant*Qo )*round(area*0.0229568)*Cw);
     return (
       <div className="container">
-        <h1 style={{textAlign: "center"}} >Detention Facility Volume Calculator</h1>
+        <h1 style={{textAlign: "center", background: "black", color: "white", padding: "15px"}} >Detention Facility Volume Calculator</h1>
         <hr/>
 
 {/* INPUTS */}
@@ -147,6 +147,15 @@ export class App extends Component {
           <input type="number" className="five columns"  disabled={true} value={ VConstant }/>
         </div>
 
+{/* Calculations */}
+        <hr/>
+        <h3 style={{textAlign: "center", marginBottom: "30px"}}> Calculations </h3>
+        <div className="row">
+          <span className="two columns u-full-width"  style={label}> Cw </span>
+          <span className="ten columns u-full-width"> 
+          ( {roof}*{roofCoef} + {paved}*{pavedCoef} + {grass}*{grassCoef} +{porousAsphault}*{porousAsphaultCoef}) / {area} = {Cw}
+          </span>
+        </div>
       </div>
     );
   }
