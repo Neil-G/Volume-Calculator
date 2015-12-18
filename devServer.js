@@ -4,6 +4,8 @@ var webpack = require('webpack');
 var config = require('./webpack.config.dev');
 
 var app = express();
+app.use(express.static('public'));
+
 var compiler = webpack(config);
 
 app.use(require('webpack-dev-middleware')(compiler, {
@@ -17,11 +19,11 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(3000, 'localhost', function(err) {
+app.listen(8000, 'localhost', function(err) {
   if (err) {
     console.log(err);
     return;
   }
 
-  console.log('Listening at http://localhost:3000');
+  console.log('Listening at http://localhost:8000');
 });

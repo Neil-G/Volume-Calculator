@@ -30,9 +30,8 @@ class Counter extends Component {
 export class App extends Component {
   render() {
     return (
-      <div>
-        <Counter increment={1} color={NICE} />
-        <Counter increment={5} color={SUPER_NICE} />
+      <div className="container">
+        <h1>Detention Facility Volume Calculator</h1>
       </div>
     );
   }
