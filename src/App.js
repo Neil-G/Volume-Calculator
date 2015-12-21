@@ -208,8 +208,8 @@ export class App extends Component {
           <input type="number" className="four columns"  disabled={true} value={ VConstant }/>
         </div>
 
-        <div className="row">
-          <span className="twelve columns u-full-width offset-by-three" style={{marginBottom: "15px"}}> 
+        <div className="row" >
+          <span className="twelve columns u-full-width offset-by-three"> 
             [ 8400 * {tConstant} / ({tConstant} + 15) - 60 * {tConstant}*{Qo} )] * {round(area*0.0229568, decimals)} * {Cw} = { VConstant }
           </span>
         </div>
